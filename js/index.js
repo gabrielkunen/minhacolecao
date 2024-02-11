@@ -55,6 +55,9 @@ function desabilitarMenu(event) {
     if (event.target.classList.contains("mobile-menu"))
         return;
 
+    if (event.target.tagName === 'LI')
+        return;
+
     if (event.target.classList.contains("line1"))
         return;
 
