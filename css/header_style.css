@@ -1,0 +1,164 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    padding-left: 50px;
+    border-bottom: 5px solid #BBA5C7;
+    position: relative;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: no-repeat center/cover url('../images/background/yurucamp.png');
+    opacity: 0.5;
+    z-index: -1;
+}
+
+header img {
+    height: 130px;
+    background-color: transparent;
+}
+
+nav {
+    background-color: transparent;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    font-size: 35px;
+    margin-right: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #6349a3;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 40px;
+    height: 2px;
+    background: #000000;
+    margin: 8px;
+}
+
+.active-mobile-menu {
+    display: block;
+}
+
+.idiomas {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+.idiomas div {
+    width: 45px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+.idiomas div:hover {
+    cursor: pointer;
+}
+
+.flag-brasil {
+    background: no-repeat center/cover url('../images/background/flag_brasil.jpg');
+}
+
+.flag-eua {
+    background: no-repeat center/cover url('../images/background/flag_eua.jpg');
+}
+
+.flag-japao {
+    background: no-repeat center/cover url('../images/background/flag_japao.jpg');
+}
+
+@media only screen and (max-width: 1100px) {
+    nav ul {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 920px) {
+    header {
+        padding-right: 40px;
+    }
+    
+    nav ul {
+        font-size: 25px;
+        margin-right: 0px;
+        padding-top: 20px;
+        position: absolute;
+        top: 150px;
+        right: 0;
+        width: 30vw;
+        height: 92vh;
+        background: #FFFFFF;
+        transition: transform 0.2s ease-in;
+        z-index: 1;
+        border-left: 3px solid #8900d4;
+        border-bottom: 3px solid #8900d4;
+        display: none;
+    }
+
+    nav ul li {
+        padding-bottom: 20px;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    nav ul {
+        width: 50vw;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    header {
+        padding-left: 10px;
+        padding-right: 10px;
+        height: 120px;
+    }
+
+    header img {
+        height: 80px;
+    }
+
+    nav ul {
+        top: 120px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    nav ul {
+        width: 60vw;
+    }
+}

@@ -1,0 +1,27 @@
+footer {
+    border-top: 5px solid #BBA5C7;
+    position: relative;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer div {
+    text-align: center;
+    font-family: 'Protest Strike', sans-serif;
+    color: #7A0C91;
+    font-size: 50px;
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: no-repeat center/cover url('../images/background/nnb.jpg');
+    opacity: 0.5;
+    z-index: -1;
+}
