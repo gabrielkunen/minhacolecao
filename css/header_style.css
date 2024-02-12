@@ -8,6 +8,7 @@ header {
     position: relative;
 }
 
+/* opacidade na imagem de background */
 header::before {
     content: "";
     position: absolute;

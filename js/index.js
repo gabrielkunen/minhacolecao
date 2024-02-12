@@ -1,3 +1,4 @@
+// Ativar e desativar o menu lateral mobile
 document.querySelector(".mobile-menu").addEventListener('click', function() {
     if (document.querySelector(".active-mobile-menu"))
         document.querySelector("nav").querySelector("ul").classList.remove("active-mobile-menu");
@@ -5,15 +6,17 @@ document.querySelector(".mobile-menu").addEventListener('click', function() {
         document.querySelector("nav").querySelector("ul").classList.add("active-mobile-menu");
 });
 
+// Remover o menu lateral ao clicar fora do menu lateral
 document.querySelector("body").addEventListener('click', function(event) {
     desabilitarMenu(event);
 });
 
+// Remover o menu lateral ao scrollar
 document.querySelector("body").addEventListener('touchmove', function(event) {
-    console.log("oi");
     desabilitarMenu(event);
 });
 
+// Trocar linguagem para português
 document.querySelector(".flag-brasil").addEventListener('click', function() {
     var urlAtual = window.location.href;
     var novaUrl = "";
@@ -26,6 +29,7 @@ document.querySelector(".flag-brasil").addEventListener('click', function() {
     window.location.href = novaUrl;
 });
 
+// Trocar linguagem para inglês
 document.querySelector(".flag-eua").addEventListener('click', function() {
     var urlAtual = window.location.href;
     var novaUrl = "";
@@ -38,6 +42,7 @@ document.querySelector(".flag-eua").addEventListener('click', function() {
     window.location.href = novaUrl;
 });
 
+// Trocar linguagem para japonês
 document.querySelector(".flag-japao").addEventListener('click', function() {
     var urlAtual = window.location.href;
     var novaUrl = "";
